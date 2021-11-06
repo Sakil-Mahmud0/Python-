@@ -193,7 +193,19 @@ else:
 print("Welcome to Tresure island")
 choice1=input('You\'re at a cross road, where do you want to go? "left" or "right": ').lower()
 if choice1=="left":
-  input()
-  # continue the game
+  choice2=input('You\'ve come to lake. There is an island in the middle of the lake.Type "wait" to wait for the boat. Type "swim" to swim across.').lower()
+  if choice2=="wait":
+    choice3=input("you arrived at the island unharmed.There is a house with 3 doors.One red,one yellow and one blue.Which color do you chose?")
+    if choice3=="red":
+      print("It's room with full of fire. Game over")
+    elif choice3=="yellow":
+      print("You found the treasure. You won")
+    elif choice3=="blue":
+      print("you enter in a room of beats. Game over")
+    else:
+      print("you choose a door which doesen't exist")
+      
+  else:
+    print("You got attack by an angry trout.Game over")
 else:
   print("you fall into the hole, Game over.")
